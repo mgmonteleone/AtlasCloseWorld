@@ -10,6 +10,10 @@ import os
 import humanize
 from typing import Iterable, Tuple, List
 
+import logging
+logging.basicConfig()
+logging.getLogger().setLevel(logging.ERROR)
+
 MAX_ADDRESSES = 16777216
 atlas_client = Atlas(user=os.getenv("ATLAS_KEY"), password=os.getenv("ATLAS_SECRET"), group=os.getenv("ATLAS_GROUP"))
 
